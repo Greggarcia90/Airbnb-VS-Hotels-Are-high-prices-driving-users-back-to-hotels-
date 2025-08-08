@@ -1,11 +1,10 @@
-Airbnb vs. Hotels: Are Soaring Prices Driving Users Back?
- Airbnb vs. Hotels: Are Soaring Prices Driving Users Back?
+Airbnb vs. Hotels: Are Soaring Prices Driving Users Back to Hotels?
 
- Business Task
+**Business Task**
 
-With the rising cost of Airbnb listings, there’s growing discussion around whether travelers are shifting back to traditional hotels. This case study explores Airbnb price trends, user behavior, and satisfaction to determine if increased pricing is influencing booking decisions.
+With the rising cost of Airbnb listings in recent years, there’s growing discussion around whether travelers are being driven back to traditiona hotel bookings. This case study explores Airbnb price trends and travelers satisfaction to determine if increased pricing is influencing booking decisions or if travelers still choose the privacy of an Airbnb over their budget.
 
- Objective
+ **Objective**
 
 Analyze Airbnb listing data to:
 - Understand price trends over time
@@ -14,16 +13,17 @@ Analyze Airbnb listing data to:
 
  Data Source
 
-- Source: [Inside Airbnb](http://insideairbnb.com/get-the-data.html) or [Kaggle Airbnb Dataset](https://www.kaggle.com/)
-- Location: (To be selected — e.g., New York City, London, Paris)
-- Timeframe: (To be defined — e.g., Jan 2022 – Aug 2023)
+- Source: [Inside Airbnb](http://insideairbnb.com/get-the-data.html)
+- Rome, Italy
+- March, 2025
 
- Data Cleaning (To be done)
+ Data Cleaning 
 
-- Combine multiple CSVs (if needed)
-- Convert price columns to numeric
-- Remove nulls and duplicates
-- Filter out outliers
+- Download the listings.csv dataset to reiew its content and structure
+- Removed unnecesary columns in Excel to reduce file size and to focus on relevant columns for my analysis (price, room_type, neighbourhood, etc)
+- Cleaned the dataset to prepare it for upload into BigQuery
+- Ensure key columns like price was in the right numeric format to prepare it for calculations
+- To avoid skewing average prices, I filtered out listings with prices above €1,000 as these were rare luxury listings that did not reflect typical Airbnb pricing in Rome.
 
  Analysis Plan (Coming soon)
 
