@@ -1,78 +1,109 @@
-Airbnb vs. Hotels: Are Soaring Prices Driving Users Back to Hotels?
+Business Task:
+Rome has become one of the most popular cities for short-term rentals among travelers. With Airbnb prices rising in recent years, travelers face an important question. What drives these prices, and what are their alternatives?
+To better understand these changes, this case study analyzes Airbnb pricing trends in Rome, Italy, to uncover patterns by date, room type, and location and draw conclusions from it.
 
-Business Task
-With Airbnb prices rising in recent years, there is growing speculation that travelers may be shifting back to traditional hotel stays.
-This case study analyzes Airbnb pricing trends and guest satisfaction in Rome, Italy, to explore whether higher costs are influencing booking decisions or if travelers still prioritize the privacy and amenities of an Airbnb over budget considerations.
+Objectives
+- Analyze Airbnb listing data in Rome.
 
-Objective
--Analyze Airbnb listing data
--Understand price trends over time.
--Identify patterns in guest behavior and preferences.
--Explore possible reasons for a shift back to hotel stays.
+- Identify pricing patterns by date, room type, host status, and location.
 
-DATA SOURCE
-- Source: [Inside Airbnb](http://insideairbnb.com/get-the-data.html) Rome, Italy ( March 2025 )
+- Use hotel averages as a comparison to show alternatives.
 
-DATA CLEANING
-To ensure the dataset was ready for analysis:
--Removed irrelevant columns to reduce file size and focus on key variables (price, room_type, neighbourhood, etc.).
--Converted the price column to numeric format for calculations.
--Filtered out extreme outliers (prices > €1,000) to prevent skew from luxury listings.
--Prepared the cleaned dataset for upload into BigQuery.
-  
-ANALLYSIS PLAN
-Average and median prices over time
-To understand the pricing of the Airbnb listings in Rome, I first calculated the average and median prices.
-The average price was found to be around €140, which was the sum of all listing prices divided by the total number of listings.
-The median price was €112, representing the middle point where half the listings are priced below and half above.
-The difference between the average and median indicates a right-skewed distribution, meaning that while some listings are priced very high (likely luxury properties), the typical traveler is more likely to encounter prices around the median of €112 per night.
+- Provide insights for travelers to help them make smart decisions and match their budget.
 
-Price Trends and spikes Within March 2025
-I grouped the listings by date and calculated the average price for each day in March 2025.
-I found that friday March 7 had the highest average daily price of 167, while wednesday March 5 had the lowest at 104.
-This suggests that even within a single month, Airbnb prices in Rome can vary significantly from midweek to weekend, likely due to demand spikes such as local events or just weekend demand.
-This kind of fluctuation can impact traveler decisions suggesting that travelers might be looking at hotel prices over the weekend to compare their best options.
 
-Room Type Pricing & Guest Satisfaction Insights
-After identifying overall daily pricing trends for March 2025, I analyzed prices, review counts, and review scores by room type.
-Private room	avg price 106	avg reviews 49	avg score 4.63
-Entire home/apt	avg price 147	avg reviews 62 avg score	4.70
-Hotel room	avg price 125 avg reviews	74 avg score	4.61
-Shared room	avg price 58 avg reviews	14 avg score	4.70
-Key Findings:
-Entire homes/apartments command the highest price (€147) and have excellent guest satisfaction (4.70), suggesting travelers are willing to pay a premium for privacy and full amenities.
-Hotel rooms rank second in price (€125) and attract the highest number of reviews (74), indicating higher turnover or guest volume, though their review score is slightly lower (4.61).
-Private rooms are a more affordable option (€106) but still maintain strong satisfaction ratings (4.63).
-Shared rooms are the cheapest option (€58) and, despite fewer bookings (14 reviews), achieve a top review score (4.70), showing that guests who choose them are often pleasantly surprised.
-These insights suggest that price alone doesn’t dictate guest satisfaction — even the lowest-priced category (shared rooms) achieves excellent ratings. Travelers weighing options may compare entire apartments with private rooms to balance cost and amenities. Airbnb hosts could use this to price competitively while maintaining high service standards, especially during high-demand days identified earlier (e.g., March 9).
+Data Sources
+- Airbnb: Inside Airbnb (Rome, March 2025). Chosen to capture the shoulder season (outside peak summer).
 
-Comparison of Superhost vs. regular host pricing
-After filtering out for listings under 500 to remove outliers, the avergae price of super host and regulr host is almost identical at 130.
-This helps us understand that listings in Rome are mostly affected by factors such as location, property type, and weekends and not so much about host status.
-Withe the earlier findings about price spikes on the weekends, this suggests rome short tem rental pricing is more sensitive to demand patterns than to host credentials. 
-- Listing availability
-- Optional: Compare against estimated hotel pricing (if available)
+- Hotels: BudgetYourTrip (Rome, 2025). Averages do not reflect daily fluctuations completely accurate.
 
- Visualizations (To be created)
 
-- Line chart: Price trend over time
-- Bar chart: Average price by room type
-- Heatmap: Availability by day/month
-- Word cloud: Common words in negative reviews (optional)
+Data Cleaning
+- Removed irrelevant columns and kept key variables such as price, host status, and location
 
- Key Findings (To be added)
+- Converted price column to numeric format in Excel for cleaning and aggregation purposes.
 
-- TBD
+- Filtered out extreme outliers (luxury stays over $800).
 
- Recommendations
+- Prepared dataset for Excel, SQL queries and Tableau.
 
-- TBD
 
- Tools
+Analysis & Insights
+1. Daily Price Fluctuations (Line Chart)
+- Average price: $140
 
-- R (tidyverse, ggplot2) or Python (pandas, matplotlib)
-- Excel or Google Sheets
-- GitHub for version control
-- Tableau (optional, for dashboards)
+- Median price: $112
 
-## 📁 Folder Structure (Planned)
+- Lowest day: March 5th at $104 (Wednesday)
+
+- Highest day: March 7th at $167 (Friday / Francesca Romana Day / Jubilee event)
+
+Insight: Events and weekends drive sharp price spikes. Travelers on a budget may find hotels more attractive during these peaks.
+
+
+2. Room Type Price Average and Ratings (Bar Chart)
+- Shared room:  $58 avg, rating 4.7
+
+- Private room: $106 avg, rating 4.6
+
+- Hotel room (via Airbnb): $125 avg, rating 4.6
+
+- Entire apartment: $146 avg, rating 4.7
+
+Insight: Entire apartments cost the most but achieve high satisfaction. Shared rooms are cheapest, yet ratings remain high.
+
+
+3. Superhosts vs. Regular Hosts 
+Average price is nearly the same at $130
+
+Insight: Host status doesn’t really impact prices. Location and demand are far more important.
+
+
+4. Location Pricing (Bar Chart)
+- Centro Storico: $150 average with 15,000 listings (tourist area)
+
+- Tiburtina: $90 average with 500 listings (outside tourist area)
+
+Insight: Central tourist areas are about $60 more expensive than less touristy neighborhoods.
+
+
+5. Airbnb vs. Hotels (Bar Chart)
+- Airbnb in Centro Storico: $150 average
+
+- Airbnb in Tiburtina: $96 average
+
+- Hotels citywide avg: $90 average
+
+Insight: Airbnbs in central tourist areas are significantly more expensive than hotels. In neighborhoods like Tiburtina, Airbnb aligns more closely with hotel averages.
+
+
+Visualizations
+Static Snapshots:
+Interactive Dashboard (Tableau Public):
+View Interactive Dashboard
+
+Key Findings Summary
+- Airbnb pricing in Rome varies widely by location, room type, and event and weekend demands.
+
+- Central tourist areas are significantly pricier than the city average.
+
+- Guest satisfaction remains consistently high regardless of room type and acommodations.
+
+- Hotels provide price stability and serve as a useful alternative for travelers flying on a budget.
+
+Recommendations
+* Choose neighborhoods strategically. Travelers on a budget should look beyond the touristy areas such as the historic center. Areas like Tiburtina or other non-touristy zones offer listings that are often $50 to $60 cheaper per night while still providing good accomodations.
+
+* Plan around events and weekends. Prices spike during local festivals or holidays so checking out what is going on during dates and booking early or shifting travel dates by a day or two can lead to major savings.
+
+* Always Compare with hotels during peak demand. When Airbnb surges above $150 in central areas, hotels usually provide more stable, affordable alternatives. A quick hotel comparison worthwhile looking at.
+
+* Entire apartments provide privacy but at the highest cost. Travelers comfortable with private rooms and with shared rooms can save significantly without losing much in satisfaction so its a good alternative, especially for solo travelers.
+
+Tools Used
+- SQL (Data cleaning & analysis)
+- Visual Studio Code (logging insights and key findings)
+- Tableau (Dashboard visuals)
+- Excel (cleaning, analyzing and formatting)
+
+
