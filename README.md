@@ -81,6 +81,7 @@ Visualizations
 Static Snapshots:
 Interactive Dashboard (Tableau Public):
 View Interactive Dashboard
+![Dashboard](images/dashboard.png)
 
 Key Findings Summary
 - Airbnb pricing in Rome varies widely by location, room type, and event and weekend demands.
