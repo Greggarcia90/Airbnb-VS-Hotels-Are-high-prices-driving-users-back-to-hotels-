@@ -1,4 +1,4 @@
-#**Business Task:**
+#Business Task:
 Rome has become one of the most popular cities for short-term rentals among travelers. With Airbnb prices rising in recent years, travelers face an important question. What drives these prices, and what are their alternatives?
 To better understand these changes, this case study analyzes Airbnb pricing trends in Rome, Italy, to uncover patterns by date, room type, and location and draw conclusions from it.
 
