@@ -11,8 +11,8 @@ To better understand these changes, this case study analyzes Airbnb pricing tren
 
 
 ## Data Sources
-- Airbnb: Inside Airbnb (Rome, March 2025). Chosen to capture the shoulder season (outside peak summer).
-- Hotels: BudgetYourTrip (Rome, 2025). Averages do not reflect daily fluctuations completely accurate.
+- **Airbnb:** Inside Airbnb (Rome, March 2025). Chosen to capture the shoulder season (outside peak summer).
+- **Hotels:** BudgetYourTrip (Rome, 2025). Averages do not reflect daily fluctuations completely accurate.
 
 
 ## Data Cleaning
@@ -24,8 +24,8 @@ To better understand these changes, this case study analyzes Airbnb pricing tren
 
 ## Analysis & Insights
 1. ### Daily Price Trends
-- Average price: $140
-- Median price: $112
+- **Average price:** $140
+- **Median price:** $112
 - Lowest day: March 5th at $104 (Wednesday)
 - Highest day: March 7th at $167 (Friday / Francesca Romana Day / Jubilee event)
 Insight: Events and weekends drive sharp price spikes. Travelers on a budget may find hotels more attractive during these peaks.
