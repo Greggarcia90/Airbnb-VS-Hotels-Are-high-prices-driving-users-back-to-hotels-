@@ -4,84 +4,65 @@ To better understand these changes, this case study analyzes Airbnb pricing tren
 
 Objectives
 - Analyze Airbnb listing data in Rome.
-
 - Identify pricing patterns by date, room type, host status, and location.
-
 - Use hotel averages as a comparison to show alternatives.
-
 - Provide insights for travelers to help them make smart decisions and match their budget.
 
 
 Data Sources
 - Airbnb: Inside Airbnb (Rome, March 2025). Chosen to capture the shoulder season (outside peak summer).
-
 - Hotels: BudgetYourTrip (Rome, 2025). Averages do not reflect daily fluctuations completely accurate.
 
 
 Data Cleaning
 - Removed irrelevant columns and kept key variables such as price, host status, and location
-
 - Converted price column to numeric format in Excel for cleaning and aggregation purposes.
-
 - Filtered out extreme outliers (luxury stays over $800).
-
 - Prepared dataset for Excel, SQL queries and Tableau.
 
 
 Analysis & Insights
-1. Daily Price Fluctuations (Line Chart)
+1. Daily Price Trends
 - Average price: $140
-
 - Median price: $112
-
 - Lowest day: March 5th at $104 (Wednesday)
-
 - Highest day: March 7th at $167 (Friday / Francesca Romana Day / Jubilee event)
-
 Insight: Events and weekends drive sharp price spikes. Travelers on a budget may find hotels more attractive during these peaks.
+![Daily Price Trends](images/price_trends.png)
 
 
-2. Room Type Price Average and Ratings (Bar Chart)
+2. Room Type Price Average and Ratings 
 - Shared room:  $58 avg, rating 4.7
-
 - Private room: $106 avg, rating 4.6
-
 - Hotel room (via Airbnb): $125 avg, rating 4.6
-
 - Entire apartment: $146 avg, rating 4.7
-
 Insight: Entire apartments cost the most but achieve high satisfaction. Shared rooms are cheapest, yet ratings remain high.
-
+![Room Type Price](images/room_type.png)
 
 3. Superhosts vs. Regular Hosts 
 Average price is nearly the same at $130
-
 Insight: Host status doesn’t really impact prices. Location and demand are far more important.
 
 
 4. Location Pricing (Bar Chart)
 - Centro Storico: $150 average with 15,000 listings (tourist area)
-
 - Tiburtina: $90 average with 500 listings (outside tourist area)
-
 Insight: Central tourist areas are about $60 more expensive than less touristy neighborhoods.
+![Location Pricing/Listings](images/location_listings.png)
 
 
-5. Airbnb vs. Hotels (Bar Chart)
+5. Airbnb vs. Hotels
 - Airbnb in Centro Storico: $150 average
-
 - Airbnb in Tiburtina: $96 average
-
 - Hotels citywide avg: $90 average
+Insight: Airbnbs in central touristy areas are significantly more expensive than hotels. In neighborhoods like Tiburtina, which are away from the touristy areas, Airbnb aligns more closely with hotel averages.
+![Airbnb vs Hotels](images/airbnb_vs_hotels.png)
 
-Insight: Airbnbs in central tourist areas are significantly more expensive than hotels. In neighborhoods like Tiburtina, Airbnb aligns more closely with hotel averages.
 
-
-Visualizations
-Static Snapshots:
-Interactive Dashboard (Tableau Public):
-View Interactive Dashboard
+Dashboard
 ![Dashboard](images/dashboard.png)
+Interactive Dashboard
+![View Interactive Dashboard](https://public.tableau.com/views/AirbnbPriceTrends/AirbnbCaseStudy?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 Key Findings Summary
 - Airbnb pricing in Rome varies widely by location, room type, and event and weekend demands.
