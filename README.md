@@ -15,7 +15,7 @@ Data Sources
 
 
 Data Cleaning
-- Removed irrelevant columns and kept key variables such as price, host status, and location
+- Removed irrelevant columns and kept key variables such as price, room types, date and location.
 - Converted price column to numeric format in Excel for cleaning and aggregation purposes.
 - Filtered out extreme outliers (luxury stays over $800).
 - Prepared dataset for Excel, SQL queries and Tableau.
@@ -61,7 +61,7 @@ Insight: Airbnbs in central touristy areas are significantly more expensive than
 Dashboard
 ![Dashboard](images/dashboard.png)
 Interactive Dashboard
-![View Interactive Dashboard](https://public.tableau.com/views/AirbnbPriceTrends/AirbnbCaseStudy?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+[View Interactive Dashboard](https://public.tableau.com/views/AirbnbPriceTrends/AirbnbCaseStudy?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 Key Findings Summary
 - Airbnb pricing in Rome varies widely by location, room type, and event and weekend demands.
